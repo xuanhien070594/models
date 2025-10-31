@@ -5,6 +5,9 @@
 <!-- |    Please see the README of parent directory for more details.                  | -->
 <!-- =================================================================================== -->
 <robot xmlns:drake="http://drake.mit.edu" name="panda">
+  <material name="dark_grey">
+    <color rgba="0.2 0.2 0.2 1"/>
+  </material>
   <link name="panda_link0">
     <inertial>
       <mass value="2.92"/>
@@ -646,21 +649,22 @@
       <inertia ixx="3.01220925051e-05" ixy="0.0" ixz="0.0" iyy="2.95873808038e-05" iyz="0.0" izz="6.95125211657e-06"/>
     </inertial>
     <visual>
-      <origin rpy="1.57079632679 0 0"/>
+      <origin rpy="3.14159265359 0 -1.57079632679" xyz="-0.0105 0.0175 0.019"/>
       <geometry>
         <mesh filename="package://drake_models/franka_description/meshes/visual/finger_holder.obj"/>
       </geometry>
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0.007 0.045"/>
+    <visual>
+      <origin rpy="3.14159265359 0 1.57079632679" xyz="0.0125 0 0.023"/>
       <geometry>
-        <sphere radius="0.012"/>
+        <mesh filename="package://drake_models/franka_description/meshes/visual/long_finger.obj"/>
       </geometry>
-    </collision>
+      <material name="dark_grey"/>
+    </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0.015 0.03"/>
+      <origin rpy="3.14159265359 0 1.57079632679" xyz="0.0125 0 0.023"/>
       <geometry>
-        <sphere radius="0.012"/>
+        <mesh filename="package://drake_models/franka_description/meshes/visual/long_finger.obj"/>
       </geometry>
     </collision>
   </link>
@@ -671,21 +675,22 @@
       <inertia ixx="3.01220925051e-05" ixy="0.0" ixz="0.0" iyy="2.95873808038e-05" iyz="0.0" izz="6.95125211657e-06"/>
     </inertial>
     <visual>
-      <origin rpy="1.57079632679 0 3.14159265359" xyz="0 0 0"/>
+      <origin rpy="3.14159265359 0 1.57079632679" xyz="0.0105 -0.0175 0.019"/>
       <geometry>
         <mesh filename="package://drake_models/franka_description/meshes/visual/finger_holder.obj"/>
       </geometry>
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 -0.007 0.045"/>
+    <visual>
+      <origin rpy="3.14159265359 0 -1.57079632679" xyz="-0.0125 0 0.023"/>
       <geometry>
-        <sphere radius="0.012"/>
+        <mesh filename="package://drake_models/franka_description/meshes/visual/long_finger.obj"/>
       </geometry>
-    </collision>
+      <material name="dark_grey"/>
+    </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 -0.015 0.03"/>
+      <origin rpy="3.14159265359 0 -1.57079632679" xyz="-0.0125 0 0.023"/>
       <geometry>
-        <sphere radius="0.012"/>
+        <mesh filename="package://drake_models/franka_description/meshes/visual/long_finger.obj"/>
       </geometry>
     </collision>
   </link>
