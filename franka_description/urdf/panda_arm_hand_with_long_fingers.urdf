@@ -694,6 +694,12 @@
       </geometry>
     </collision>
   </link>
+  <link name="finger_tip"/>
+  <joint name="finger_tip_joint" type="fixed">
+    <parent link="panda_hand"/>
+    <child link="finger_tip"/>
+    <origin rpy="0 0 0" xyz="0 0 0.203191"/>
+  </joint>
   <joint name="panda_finger_joint1" type="prismatic">
     <parent link="panda_hand"/>
     <child link="panda_leftfinger"/>
