@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot xmlns:drake='http://drake.mit.edu' name="panda_hand_with_long_fingers">
+  <material name="dark_grey">
+    <color rgba="0.2 0.2 0.2 1"/>
+  </material>
   <link name="panda_hand">
     <inertial>
       <mass value="0.73" />
